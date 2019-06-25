@@ -40,6 +40,8 @@
             this.폼보이기ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.끝내기ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.statusTitle = new System.Windows.Forms.ToolStripStatusLabel();
+            this.statusMessage = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.파일ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.끝내기ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -48,8 +50,6 @@
             this.추가ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.도움말ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.이프로그램은ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.statusTitle = new System.Windows.Forms.ToolStripStatusLabel();
-            this.statusMessage = new System.Windows.Forms.ToolStripStatusLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.cmsMenu.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -84,6 +84,7 @@
             this.btnModify.TabIndex = 3;
             this.btnModify.Text = "수정";
             this.btnModify.UseVisualStyleBackColor = false;
+            this.btnModify.Click += new System.EventHandler(this.BtnModify_Click);
             // 
             // btnAdd
             // 
@@ -94,6 +95,7 @@
             this.btnAdd.TabIndex = 4;
             this.btnAdd.Text = "추가";
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
             // 
             // pictureBox1
             // 
@@ -148,6 +150,18 @@
             this.statusStrip1.TabIndex = 5;
             this.statusStrip1.Text = "statusStrip1";
             // 
+            // statusTitle
+            // 
+            this.statusTitle.Name = "statusTitle";
+            this.statusTitle.Size = new System.Drawing.Size(42, 17);
+            this.statusTitle.Text = "상태 : ";
+            // 
+            // statusMessage
+            // 
+            this.statusMessage.Name = "statusMessage";
+            this.statusMessage.Size = new System.Drawing.Size(12, 17);
+            this.statusMessage.Text = "-";
+            // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -171,7 +185,7 @@
             // 끝내기ToolStripMenuItem1
             // 
             this.끝내기ToolStripMenuItem1.Name = "끝내기ToolStripMenuItem1";
-            this.끝내기ToolStripMenuItem1.Size = new System.Drawing.Size(110, 22);
+            this.끝내기ToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.끝내기ToolStripMenuItem1.Text = "끝내기";
             // 
             // 프로필ToolStripMenuItem
@@ -186,14 +200,16 @@
             // 수정ToolStripMenuItem
             // 
             this.수정ToolStripMenuItem.Name = "수정ToolStripMenuItem";
-            this.수정ToolStripMenuItem.Size = new System.Drawing.Size(98, 22);
+            this.수정ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.수정ToolStripMenuItem.Text = "수정";
+            this.수정ToolStripMenuItem.Click += new System.EventHandler(this.수정ToolStripMenuItem_Click);
             // 
             // 추가ToolStripMenuItem
             // 
             this.추가ToolStripMenuItem.Name = "추가ToolStripMenuItem";
-            this.추가ToolStripMenuItem.Size = new System.Drawing.Size(98, 22);
+            this.추가ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.추가ToolStripMenuItem.Text = "추가";
+            this.추가ToolStripMenuItem.Click += new System.EventHandler(this.추가ToolStripMenuItem_Click);
             // 
             // 도움말ToolStripMenuItem
             // 
@@ -206,20 +222,9 @@
             // 이프로그램은ToolStripMenuItem
             // 
             this.이프로그램은ToolStripMenuItem.Name = "이프로그램은ToolStripMenuItem";
-            this.이프로그램은ToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.이프로그램은ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.이프로그램은ToolStripMenuItem.Text = "이 프로그램은...";
-            // 
-            // statusTitle
-            // 
-            this.statusTitle.Name = "statusTitle";
-            this.statusTitle.Size = new System.Drawing.Size(42, 17);
-            this.statusTitle.Text = "상태 : ";
-            // 
-            // statusMessage
-            // 
-            this.statusMessage.Name = "statusMessage";
-            this.statusMessage.Size = new System.Drawing.Size(12, 17);
-            this.statusMessage.Text = "-";
+            this.이프로그램은ToolStripMenuItem.Click += new System.EventHandler(this.이프로그램은ToolStripMenuItem_Click);
             // 
             // Form1
             // 
